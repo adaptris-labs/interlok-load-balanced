@@ -1,0 +1,18 @@
+version: '3.2'
+services:
+  interlok:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mcwarman/interlok-load-balanced
+    environment:
+      JVM_ARGS: -Xmx256m
+      EXCLUDE_PORTS: 5555,8080
+  lb:
+    image: dockercloud/haproxy
+    links:
+      - interlok
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
