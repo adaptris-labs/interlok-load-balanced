@@ -17,4 +17,4 @@ $ curl -s http://localhost/hello-world
 Hello World from 6a6c8543f41f!
 ```
 
-Created to coincide with [Interlok, Docker and Load balancing](http://interlok.adaptris.net/blog/2017/08/31/interlok-docker-and-load-balancing/) blog post.
+Created to coincide with [Interlok, Docker and Load balancing](http://interlok.adaptris.net/blog/2017/08/31/interlok-docker-and-load-balancing.html) blog post.
